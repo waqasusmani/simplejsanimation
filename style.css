@@ -1,0 +1,112 @@
+body {
+    width: 100vw;
+    overflow: hidden;
+}
+
+#pjet {
+    position: absolute;
+    top: 10vh;
+    width: 30vw;
+    animation-name: pjetAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+@keyframes pjetAnim {
+    0% {
+        top: 10vh
+    }
+    50% {
+        top:11vh
+    }
+    100%{
+        top:10vh
+    }
+}
+
+
+#pcar {
+    width: 15vw;
+    transition: 2s ease-in;
+    position: absolute;
+    bottom: 10vh;
+    left: 10vw;
+    animation-name: carAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes carAnim {
+    0% {
+        bottom: 10vh
+    }
+    50% {
+        bottom:11vh
+    }
+    100%{
+        bottom:10vh
+    }
+}
+
+#ecar1 {
+    width:15vw;
+    right:-20vw;
+    transition: 2s linear;
+    position: absolute;
+    bottom:10vh;
+    animation-name: carAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;   
+}
+
+#ecar2 {
+    width:15vw;
+    right:-20vw;
+    transition: 2s linear;
+    position: absolute;
+    bottom:10vh;
+    animation-name: carAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;   
+}
+
+#missile {
+    height: 10vh;
+    width:10vw;
+    left:10vw;
+    top: 20vh;
+    position: absolute;
+    /* visibility: hidden; */
+    transition: 2s linear;
+}
+
+.missile-transition {
+    transition: 2s linear;
+}
+
+#explosion1 {
+    width: 20vw;
+    position: absolute;
+    left: 70vw;
+    top:60vh;
+    max-width: 0vw;
+}
+
+#explosion2 {
+    width: 20vw;
+    position: absolute;
+    left: 60vw;
+    top:60vh;
+    max-width: 0vw;
+}
+
+h3 {
+    text-align: right;
+    margin-right: 10vw;
+    visibility: hidden;
+    animation-name:headAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
