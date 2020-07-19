@@ -7,6 +7,80 @@ setTimeout(() => {
     document.querySelector("#ecar2").style.right="20vw";
 }, 10000);
 
+var ecar1 = document.querySelector("#ecar1");
+var ecar2 = document.querySelector("#ecar2");
+
+setInterval(()=>{if (ecar1.style.display=="none" && ecar2.style.display=="none") {
+    document.querySelector("h3").innerText="Both enemy cars destroyed. Reload to play again."
+}},500);
+
+var clouds = document.querySelectorAll(".clouds");
+var roadLines = document.querySelectorAll(".road-lines");
+var roadLinesNext = document.querySelectorAll(".road-lines-next");
+var trees = document.querySelectorAll(".trees");
+var treesNext = document.querySelectorAll(".trees-next");
+
+var frames = [
+    {transform: "translateX(120vw)"},
+    {transform: "translateX(0vw)"},
+];
+
+var framesRoadLinesNext = [
+    {transform: "translateX(0vw)"},
+    {transform: "translateX(-20vw)"}
+]
+
+var framesTrees = [
+    {transform: "translateX(120vw)"},
+    {transform: "translateX(-100vw)"}
+]
+
+var framesTreesNext = [
+    {transform: "translateX(90vw)"},
+    {transform: "translateX(-200vw)"}
+]
+
+var timing = {
+    duration: 5000,
+    iterations: Infinity,
+    //direction: "alternate"
+}
+
+var timing2 = {
+    duration: 2500,
+    iterations: Infinity,
+}
+
+var timing3 = {
+    duration: 250,
+    iterations: Infinity,
+}
+
+for (var a=0; a<2; a++) {
+    clouds[a].animate(frames,timing)
+}
+
+for (var a=2; a<4; a++) {
+    clouds[a].animate(frames,timing2)
+}
+
+for (var a=0; a<roadLines.length; a++) {
+    roadLines[a].animate(frames,timing2)
+}
+
+for (var a=0; a<roadLinesNext.length; a++) {
+    roadLinesNext[a].animate(framesRoadLinesNext,timing3)
+}
+
+for (var a=0; a<trees.length; a++) {
+    trees[a].animate(framesTrees,timing2)
+}
+
+for (var a=0; a<treesNext.length; a++) {
+    treesNext[a].animate(framesTreesNext,{duration:3000,iterations:Infinity})
+}
+
+
 var missile=null;
 
 // document.addEventListener("click",()=>{
@@ -53,8 +127,6 @@ var missile=null;
 
 document.addEventListener("click",()=>{
     var missile = document.querySelector("#missile")
-    var ecar1 = document.querySelector("#ecar1")
-    var ecar2 = document.querySelector("#ecar2")
     var explosion1 = document.querySelector("#explosion1")
     var explosion2 = document.querySelector("#explosion2")
     
@@ -87,6 +159,7 @@ document.addEventListener("click",()=>{
             setTimeout(()=>explosion1.style.maxWidth="0vw",1500)
         }
     },2000)
+
 })
 
 

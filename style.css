@@ -1,6 +1,144 @@
 body {
     width: 100vw;
     overflow: hidden;
+    background-image: url(./images/roadsky.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100vh;
+}
+
+h3 {
+    text-align: right;
+    margin-right: 10vw;
+    visibility: hidden;
+    color: red;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {color:red}
+    50% {color: blue}
+    100% {color: green}
+}
+
+
+.clouds {
+    position: absolute;
+    width: 7.5vw;
+    height: 7.5vh;
+}
+
+#cloud1 {
+    top: 15vh;
+    
+}
+
+#cloud2 {
+    top:10vh;
+    
+}
+
+#cloud3 {
+    top: 5vh;
+    
+}
+
+#cloud4 {
+    top: 12.5vh;
+
+}
+
+.trees, .trees-next {
+    position: absolute;
+    height: 15vh;
+}
+
+#tree1 {
+    top:50vh;
+    left:10vw;
+}
+
+#tree2 {
+    top:60vh;
+    left:30vw;
+}
+
+#tree3 {
+    top:55vh;
+    left:55vw;
+}
+
+#tree4 {
+    top:62.5vh;
+    left:90vw;
+}
+
+#tree5 {
+    top:45vh;
+    left:110vw;
+}
+
+#tree6 {
+    top:65vh;
+    left:175vw;
+}
+
+.road-lines, .road-lines-next {
+    top: 90vh;
+    position: absolute;
+    width: 5vw;
+    color: white;
+    background-color: white;
+}
+
+#rl2 {
+    left: 15vw;
+}
+
+#rl3 {
+    left: 30vw;
+}
+
+#rl4 {
+    left: 45vw;
+}
+
+#rl5 {
+    left: 60vw;
+}
+
+#rl6 {
+    left: 75vw;
+}
+
+#rl7 {
+    left: 90vw;
+}
+
+#rl8 {
+    left: 15vw;
+}
+
+#rl9 {
+    left:30vw;
+}
+
+#rl10 {
+    left:45vw;
+}
+
+#rl11 {
+    left: 60vw;
+}
+
+#rl12 {
+    left: 75vw;
+}
+
+#rl13 {
+    left: 90vw;
 }
 
 #pjet {
@@ -101,12 +239,5 @@ body {
     max-width: 0vw;
 }
 
-h3 {
-    text-align: right;
-    margin-right: 10vw;
-    visibility: hidden;
-    animation-name:headAnim;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
+
 
